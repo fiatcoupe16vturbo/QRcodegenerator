@@ -54,7 +54,7 @@
         <h1>QR Kod Oluşturucu</h1>
         <input type="text" id="text-input" placeholder="Metin veya URL girin">
         <button onclick="generateQRCode()">Oluştur</button>
-        <div id="qrcode"></div>
+        <canvas id="qrcode"></canvas>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
@@ -66,6 +66,7 @@
                 return;
             }
 
+            
             var qr = new QRious({
                 element: document.getElementById('qrcode'),
                 value: qrText,
